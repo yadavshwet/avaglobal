@@ -1,0 +1,29 @@
+#logo {
+    width: 130px;
+    height: 64px;
+    float: left;
+    z-index: 99;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 20px auto 0;
+}   
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92%;
+}
+
+.app-logo {
+    margin-left: 5vw;
+}
+
+.menubar span {
+    color: white;
+}
