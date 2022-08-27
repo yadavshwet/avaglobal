@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 #logo {
     width: 130px;
     height: 64px;
-    float: left;
     z-index: 99;
 }
 
 .nav-bar {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
     margin: 20px auto 0;
+    z-index: 99;
 }   
 
 .wrapper {
@@ -24,6 +26,14 @@
     margin-left: 5vw;
 }
 
+.menubar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 16%; 
+}
+
 .menubar span {
     color: white;
+    font-family: 'Source Sans Pro', sans-serif;
 }
