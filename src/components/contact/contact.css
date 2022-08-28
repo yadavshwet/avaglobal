@@ -1,0 +1,19 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 69%;
+  margin: auto;
+  align-items: center;
+}
+.information {
+  display: flex;
+  justify-content: space-around;
+}
+.contact-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.information div {
+  padding: 2rem;
+  font-size: 1.3rem;
+}

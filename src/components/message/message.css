@@ -1,0 +1,33 @@
+.message-btn {
+  background: #e9e6e6;
+  color: #413e3e;
+  border-radius: 50px;
+  padding: 12px;
+  text-align: center;
+  height: fit-content;
+}
+.msg-container {
+  color: #f7f7f7;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4rem 4rem;
+}
+
+/* .msg-video {
+  width: 30%;
+  height: 30%;
+  background: #d9d9d9;
+} */
+
+.msg-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2rem 2rem 2rem;
+  color: #303030;
+  width: 40%;
+}
+.message-data {
+  color: #000;
+  margin-top: 3rem;
+}

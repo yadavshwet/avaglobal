@@ -1,5 +1,5 @@
 import React from "react";
-import demo from "../../../images/demo_video.mp4";
+import demo from "../../assets/images/demo_video.mp4";
 import "./Video.css";
 
 function Video() {
@@ -20,9 +20,15 @@ function Video() {
       <div className="container-tracking">
         <p>Track Your Container</p>
         <div className="tracking-btns">
-          <a href="/" id="container">Container Number</a>
-          <a href="/" id="mbl">MBL Number</a>
-          <a href="/" id="booking">Booking Number</a>
+          <a href="/" id="container">
+            Container Number
+          </a>
+          <a href="/" id="mbl">
+            MBL Number
+          </a>
+          <a href="/" id="booking">
+            Booking Number
+          </a>
         </div>
       </div>
       <div className="supply-chain">

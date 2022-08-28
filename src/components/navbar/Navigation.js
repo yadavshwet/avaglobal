@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../../../images/logo.svg";
-import list from "../../../images/list.svg";
+import logo from "../../assets/images/logo.svg";
+import list from "../../assets/images/list.svg";
 import "./navigation.css";
 
 function Navigation() {

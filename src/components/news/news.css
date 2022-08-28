@@ -1,0 +1,21 @@
+.news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.news-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.parent-container {
+  margin: auto;
+  width: 50%;
+}
+.news-desc {
+  padding: 1.2rem;
+  background: rgba(58, 56, 56, 0.6);
+}
+.news-desc div {
+  font-size: 1.7rem;
+}
