@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
 #black-overlay {
-  position: absolute; 
-  width: 100%; 
+  position: absolute;
+  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.6); 
-  z-index: 1; 
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
   -webkit-transform: translate3d(0, 0, 0);
 }
 
@@ -24,22 +24,23 @@
 } */
 
 .video-wrapper {
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
 video {
-  position: absolute;
+  position: relative;
   right: 0;
   bottom: 0;
   z-index: -1;
+  object-fit: fill;
   width: 100%;
 }
 
 .overlay-text {
-  position:absolute;
-  top:0;
-  left:0;
+  position: absolute;
+  top: 30%;
+  left: 19%;
   z-index: 99;
 }
 
@@ -49,25 +50,26 @@ video {
 
 .overlay-text p {
   text-transform: uppercase;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #fff;
   font-weight: bolder;
   text-align: center;
   font-size: 3em;
-  transform: translate(45%, 15rem);
 }
 
 .container-tracking {
   position: absolute;
   z-index: 99;
-  color: #fff;
+  color: #e3e3e3;
   text-align: center;
-  transform: translate(35em, 34rem);
   width: 30%;
+  bottom: 10%;
+  left: 32%;
 }
 
 .container-tracking p {
   font-size: 1.23em;
+  font-weight: 500;
 }
 
 .container-tracking a {
@@ -87,21 +89,22 @@ video {
 
 .container-tracking a {
   padding: 15px;
-  background-color: #477EEA;
-  border-radius: 6px; 
+  background-color: #477eea;
+  border-radius: 6px;
   font-weight: 600;
 }
 
 #mbl {
-  background-color: #0B1523;
+  background-color: #0b1523;
 }
 
 .supply-chain {
   position: absolute;
   z-index: 99;
   color: #fff;
-  transform: translate(85rem, 35rem);
   font-weight: 500;
+  bottom: 10%;
+  right: 5%;
 }
 
 .dash {

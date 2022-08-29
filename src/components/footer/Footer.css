@@ -1,0 +1,57 @@
+footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #393939;
+}
+
+.inner-footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.inner-footer p,
+.inner-footer a {
+  color: #fff;
+}
+
+.inner-footer a {
+  text-decoration: none;
+}
+
+.solutions,
+.services,
+.tools {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style: none;
+}
+
+#solns,
+#service,
+#tool {
+  margin-left: 32px;
+}
+
+.foot-dash {
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin-left: 2rem;
+  margin-bottom: 10px;
+}
+
+.copyright hr {
+  margin-left: 4rem;
+  width: 90%;
+  color: #fff;
+}
+
+.copyright p {
+  margin-left: 4rem;
+  color: #fff;
+}
