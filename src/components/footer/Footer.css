@@ -9,11 +9,16 @@ footer {
   align-items: baseline;
   justify-content: space-evenly;
   margin-top: 40px;
+  
 }
 
 .inner-footer p,
 .inner-footer a {
   color: #fff;
+}
+
+.inner-footer a:hover {
+  color: rgb(210, 208, 208);
 }
 
 .inner-footer a {

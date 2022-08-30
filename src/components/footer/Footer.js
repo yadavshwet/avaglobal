@@ -18,11 +18,11 @@ function Footer() {
                 <a href="/">Optimal Logistics Network Design</a>
               </li>
               <li>
-                <a href="/">Large Comalex Estimations</a>
+                <a href="/">Large Complex Estimations</a>
               </li>
               <li>
                 <a href="/">
-                  Interalay between Customised & <br />
+                  Interlay between Customised & <br />
                   Standardised solutions
                 </a>
               </li>

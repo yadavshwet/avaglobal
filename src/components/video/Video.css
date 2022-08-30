@@ -94,8 +94,16 @@ video {
   font-weight: 600;
 }
 
+.container-tracking a:hover {
+  background-color: #7099ec;
+}
+
 #mbl {
   background-color: #0b1523;
+}
+
+#mbl:hover {
+  background-color: #1d2c42;
 }
 
 .supply-chain {
