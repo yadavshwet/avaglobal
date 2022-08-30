@@ -1,9 +1,12 @@
 .contact-container {
   display: flex;
   flex-direction: column;
-  width: 69%;
+  width: 100%;
+  height: 120vh;
+  justify-content: center;
   margin: auto;
   align-items: center;
+  background-color: #f7f7f7;
 }
 .information {
   display: flex;

@@ -9,7 +9,12 @@
 }
 
 .msg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
   color: #f7f7f7;
+  background-color: #f7f7f7;
   display: flex;
   justify-content: space-evenly;
   padding: 4rem 4rem;

@@ -1,5 +1,8 @@
 .news-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110vh;
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
