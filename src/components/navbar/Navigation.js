@@ -3,12 +3,12 @@ import logo from "../../assets/images/logo.svg";
 import list from "../../assets/images/list.svg";
 import "./navigation.css";
 
-function Navigation() {
+function Navigation({ styles }) {
   return (
-    <div className="nav-bar">
+    <div className="nav-bar" style={styles}>
       <nav className="wrapper">
         <div className="app-logo">
-          <a href="https://www.avaglobal.in/">
+          <a href="/">
             <img src={logo} alt="avaglobal" id="logo" />
           </a>
         </div>

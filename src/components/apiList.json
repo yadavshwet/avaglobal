@@ -1,0 +1,8 @@
+ {
+  "api": {
+    "carrierList": "https://connect.cargoes.com/flow/api/public_tracking/v1/carrierList",
+    "shippment": "https://connect.cargoes.com/flow/api/public_tracking/v1/shipments",
+    "generateSharingUrl": "https://connect.cargoes.com/flow/api/public_tracking/v1/generateSharingUrl",
+    "createContainers": "https://connect.cargoes.com/flow/api/public_tracking/v1/createContainers"
+  }
+}

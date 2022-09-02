@@ -11,8 +11,9 @@
   top: 0;
   left: 0;
   right: 0;
-  margin: 20px auto 0;
+  padding: 5px;
   z-index: 99;
+  color: #ffffff;
 }
 
 .wrapper {
@@ -24,6 +25,7 @@
 
 .app-logo {
   margin-left: 5vw;
+  margin-top: 8px;
 }
 
 .menubar {

@@ -1,6 +1,7 @@
 import React from "react";
 import demo from "../../assets/images/demo_video.mp4";
 import "./Video.css";
+import { Link } from "react-router-dom";
 
 function Video() {
   return (
@@ -20,15 +21,17 @@ function Video() {
       <div className="container-tracking">
         <p>Track Your Container</p>
         <div className="tracking-btns">
-          <a href="/" id="container">
+          <Link to="/track-container" id="container">
             Container Number
-          </a>
-          <a href="/" id="mbl">
+          </Link>
+
+          <Link to="/track-container" id="container">
             MBL Number
-          </a>
-          <a href="/" id="booking">
+          </Link>
+
+          <Link to="/track-container" id="container">
             Booking Number
-          </a>
+          </Link>
         </div>
       </div>
       <div className="supply-chain">
