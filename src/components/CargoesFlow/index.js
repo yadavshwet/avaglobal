@@ -8,7 +8,7 @@ import { Loader } from "@googlemaps/js-api-loader";
 import response from "../response.json";
 // import apilist from "../apiList.json";
 import Table from "react-bootstrap/Table";
-import Wrapper from "./Timeline";
+import Wrapper from "./Wrapper";
 import Location from "./Location";
 
 const Details = () => {
@@ -27,24 +27,54 @@ const Details = () => {
 
 const TrackContainer = () => {
   const [isActive, setIsActive] = useState(false);
+  const [selectedTab, setSelectedTab] = useState("");
+  const [carrierlist, setCarrierlist] = useState(response.carrierList);
+
+  const handleClick = (shipmentType) => {
+    setSelectedTab(shipmentType);
+
+    const aa = response.carrierList.filter(
+      (item) => item.shipmentType === shipmentType
+    );
+    console.log(aa);
+    setCarrierlist(aa);
+  };
 
   return (
     <div className="search-container">
       <div className="transport-mode">
         <div className="first-btn">
-          <button type="button" className="first">
+          <button
+            type="button"
+            className={
+              carrierlist === "INTERMODAL_SHIPMENT" ? "selected first" : "first"
+            }
+            onClick={() => handleClick("INTERMODAL_SHIPMENT")}
+          >
             <span>Ocean</span>
             <span className="focus-overlay"></span>
           </button>
         </div>
         <div className="second-btn">
-          <button type="button" className="second">
+          <button
+            type="button"
+            className={
+              carrierlist === "TRUCK_SHIPMENT" ? "selected second" : "second"
+            }
+            onClick={() => handleClick("TRUCK_SHIPMENT")}
+          >
             <span>Road</span>
             <span className="focus-overlay"></span>
           </button>
         </div>
         <div className="third-btn">
-          <button type="button" className="third">
+          <button
+            type="button"
+            className={
+              carrierlist === "AIR_SHIPMENT" ? "selected third" : "third"
+            }
+            onClick={() => handleClick("AIR_SHIPMENT")}
+          >
             <span>Air</span>
             <span className="focus-overlay"></span>
           </button>
@@ -52,6 +82,8 @@ const TrackContainer = () => {
       </div>
 
       <div className="trackByContainer">
+        <span></span>
+        <div className="line"></div>
         <input
           type="search"
           className="container-search-bar"
@@ -61,11 +93,12 @@ const TrackContainer = () => {
 
       <select>
         <option value="Select a Carrier"> -- Select a Carrier -- </option>
-        {response.carrierList.map((item, index) => (
-          <option key={index} value={item.carrierName}>
-            {item.carrierName}
-          </option>
-        ))}
+        {carrierlist.length > 0 &&
+          carrierlist.map((item, index) => (
+            <option key={index} value={item.carrierName}>
+              {item.carrierName}
+            </option>
+          ))}
       </select>
 
       <div className="search-btn">
@@ -107,24 +140,30 @@ const ContainerDetails = () => {
         <ShippmentSegment />
       </div>
       <div className="second-div">
-        <div className="mt-4">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722504.475534343!2d51.71162449751142!3d24.33749424689534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1662137409927!5m2!1sen!2sin"
-            width="800"
-            height="500"
-            allowFullScreen=""
-            title="map"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <Location />
+        <Card className="mt-4">
+          <h3 className="tracking-events">Tracking Events</h3>
+          <Card.Body className="mt-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722504.475534343!2d51.71162449751142!3d24.33749424689534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1662137409927!5m2!1sen!2sin"
+              width="800"
+              height="500"
+              allowFullScreen=""
+              title="map"
+              loading="lazy"
+              id="maps"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </Card.Body>
+          <Location />
+        </Card>
       </div>
     </div>
   );
 };
 
 const ShippmentSegment = () => {
+  const segment =
+    response.shippment.data.transportJourneys.portToPort.segmentData;
   return (
     <Card className="mt-5">
       <Card.Body className="ml-2 d-flex flex-col ">
@@ -141,30 +180,19 @@ const ShippmentSegment = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>Otto</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>Thornton</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>@twitter</td>
-              <td>@twitter</td>
-            </tr>
+            {segment &&
+              segment.map((item, i) => {
+                return (
+                  <tr>
+                    <td>{item.origin}</td>
+                    <td>{item.destination}</td>
+                    <td>{item.transportName}</td>
+                    <td>{item.tripNumber}</td>
+                    <td>{item.atd}</td>
+                    <td>{item.ata}</td>
+                  </tr>
+                );
+              })}
           </tbody>
         </Table>
       </Card.Body>
@@ -174,6 +202,7 @@ const ShippmentSegment = () => {
 
 const Container = () => {
   const shippment = response.shippment.data;
+  const segment = response.shippment.data.transportJourneys.portToPort;
 
   return (
     <Card className="m-4">
@@ -195,13 +224,45 @@ const Container = () => {
               <p className="fw-bold">{shippment.mblNumber}</p>
             </div>
           )}
-
           {
             <div className="grid-item">
               <p>Carrier</p>
               <p className="fw-bold">Maersk</p>
             </div>
           }
+        </div>
+
+        <hr></hr>
+        <div className="tracking-details">Tracking Details</div>
+
+        <div className="grid-container-segment">
+          <div className="grid-item-seg">
+            <p>Shipper</p>
+            <div className="d-flex">
+              <p>Origin Port:</p>
+              <p className="fw-bold ml-2">{segment.originHub}</p>
+            </div>
+            <div className="d-flex">
+              <p>Port Gate in:</p>
+              <p className="fw-bold ml-2">{segment.gateInTime}</p>
+            </div>
+            <div className="d-flex">
+              <p>Port ATD:</p>
+              <p className="fw-bold ml-2">{segment.portAtd}</p>
+            </div>
+          </div>
+
+          <div className="grid-item-seg">
+            <p>Consignee</p>
+            <div className="d-flex">
+              <p>Destination Port:</p>
+              <p className="fw-bold ml-2">{segment.destinationHub}</p>
+            </div>
+            <div className="d-flex">
+              <p>Port ATA:</p>
+              <p className="fw-bold ml-2">{segment.portAta}</p>
+            </div>
+          </div>
         </div>
       </Card.Body>
     </Card>
