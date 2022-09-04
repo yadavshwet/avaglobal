@@ -14,32 +14,38 @@ function Video() {
         muted="muted"
         id="myVideo"
       ></video>
-      <div className="overlay-text">
-        <p className="ava-global">ava global</p>
-        <p className="logistics">Redefining logistics & transportation</p>
-      </div>
-      <div className="container-tracking">
-        <p>Track Your Container</p>
-        <div className="tracking-btns">
-          <Link to="/track-container" id="container">
-            Container Number
-          </Link>
+      <div className="headline tracking">
+        <div className="purpose">
+          <p className="ava-global">ava global</p>
+          <p className="logistics">Redefining logistics & transportation</p>
+        </div>
+        <div className="container-tracking">
+          <div className="wrapper-tracking">
+            <p id="TYC">Track Your Container</p>
+            <div className="tracking-btns">
+              <Link to="/track-container" id="container">
+                Container Number
+              </Link>
 
-          <Link to="/track-container" id="container">
-            MBL Number
-          </Link>
+              <Link to="/track-container" id="mbl">
+                MBL Number
+              </Link>
 
-          <Link to="/track-container" id="container">
-            Booking Number
-          </Link>
+              <Link to="/track-container" id="container">
+                Booking Number
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
       <div className="supply-chain">
-        <div className="dash"></div>
-        <p>
-          LOGISTIC SOLUTIONS & SUPPLY <br />
-          CHAIN OPERATIONS.
-        </p>
+        <div className="supply-dash">
+          <div className="dash"></div>
+          <p>
+            LOGISTIC SOLUTIONS & SUPPLY <br />
+            CHAIN OPERATIONS.
+          </p>
+        </div>
       </div>
       <div id="video-overlay"></div>
       <div id="black-overlay"></div>

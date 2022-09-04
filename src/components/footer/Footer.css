@@ -1,23 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 footer {
   width: 100%;
   padding: 20px;
-  background-color: #393939;
+  background-color: #0f0f0f;
+  font-family: "Montserrat", cursive;
+}
+
+#logo {
+  z-index: 9999;
 }
 
 .inner-footer {
   display: flex;
-  align-items: baseline;
   justify-content: space-evenly;
   margin-top: 40px;
 }
 
-.inner-footer p,
 .inner-footer a {
-  color: #fff;
+  color: #6d6d6d;
 }
 
 .inner-footer a:hover {
-  color: rgb(210, 208, 208);
+  color: #fff;
 }
 
 .inner-footer a {
@@ -38,16 +43,19 @@ li {
 #solns,
 #service,
 #tool {
+  color: #fff;
   margin-left: 32px;
+  font-weight: bolder;
+  font-size: 1em;
 }
 
-.foot-dash {
+/* .foot-dash {
   width: 30px;
   height: 2px;
   background-color: #fff;
   margin-left: 2rem;
   margin-bottom: 10px;
-}
+} */
 
 .copyright hr {
   margin-left: 4rem;
@@ -58,4 +66,41 @@ li {
 .copyright p {
   margin-left: 4rem;
   color: #fff;
+}
+
+.contact-us h5 {
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.055rem;
+  padding-bottom: 12px;
+}
+
+#contact-input {
+  outline: none;
+  background-color: #1b1b1b;
+  color: #fff;
+  height: auto;
+  margin-bottom: 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#submit-form {
+  border-radius: 0.6rem;
+  margin-left: 10px;
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: #3898ec;
+  color: #fff;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#submit-form:hover {
+  filter: brightness(129%);
+  outline-offset: 0px;
+  outline: hsla(0, 0%, 100%, 0.1) solid 6px;
 }

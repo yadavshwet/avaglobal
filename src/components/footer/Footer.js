@@ -69,10 +69,22 @@ function Footer() {
             </ul>
           </div>
         </div>
+        <div className="contact-us">
+          <h5>Get in touch with us!</h5>
+          <div className="contact">
+            <input
+              type="text"
+              placeholder="Enter your email"
+              id="contact-input"
+            />
+            <input type="submit" value="Submit" id="submit-form" />
+          </div>
+        </div>
       </div>
       <div className="copyright">
         <hr />
         <p>© Copyright 2022 AVA GLOBAL - All Rights Reserved</p>
+        <div className=""></div>
       </div>
     </footer>
   );

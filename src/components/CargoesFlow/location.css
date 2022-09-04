@@ -14,7 +14,7 @@
   font-weight: 700;
 }
 
-ul {
+.un-lists {
   position: relative;
   padding: 0;
   margin: 0;
@@ -41,7 +41,7 @@ ul {
   margin-left: 1rem;
 }
 
-li {
+.lists {
   position: relative;
   list-style: none;
   padding-top: 5px;
